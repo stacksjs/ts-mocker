@@ -1,11 +1,9 @@
-import type { BunpressConfig } from 'bunpress'
+import type { BunPressConfig } from '@stacksjs/bunpress'
 
-const config: BunpressConfig = {
-  name: '@stacksjs/ts-faker',
+const config: BunPressConfig = {
+  title: '@stacksjs/ts-faker',
   description: 'Performance-focused TypeScript faker library with comprehensive locale support',
   url: 'https://ts-mocker.stacksjs.org',
-  theme: 'docs',
-
   nav: [
     { text: 'Guide', link: '/guide' },
     { text: 'Data Types', link: '/data-types' },
@@ -51,16 +49,17 @@ const config: BunpressConfig = {
     ],
   },
 
-  search: true,
-  editLink: {
-    pattern: 'https://github.com/stacksjs/ts-mocker/edit/main/docs/:path',
-    text: 'Edit this page on GitHub',
+  themeConfig: {
+    editLink: {
+      pattern: 'https://github.com/stacksjs/ts-mocker/edit/main/docs/:path',
+      text: 'Edit this page on GitHub',
+    },
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/stacksjs/ts-mocker' },
+      { icon: 'discord', link: 'https://discord.gg/stacksjs' },
+    ],
   },
 
-  socialLinks: [
-    { icon: 'github', link: 'https://github.com/stacksjs/ts-mocker' },
-    { icon: 'discord', link: 'https://discord.gg/stacksjs' },
-  ],
 }
 
 export default config
